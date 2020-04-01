@@ -35,3 +35,15 @@ let songs = [
     }
 ]
 
+let audio = new Audio(songs[0].url);
+let previousButton = document.querySelector('.previous')
+let playButton = document.querySelector('.play')
+let pauseButton = document.querySelector('.pause')
+let nextButton = document.querySelector('.next')
+let firstG = document.querySelector(".first-g")
+let secondG = document.querySelector(".second-g")
+let artist = document.querySelector(".artist")
+let song = document.querySelector(".song")
+let popUp = document.querySelector('.alert')
+let musicLogo = `<i class="fas fa-music"></i>`
+let currentSongIndex = 0
