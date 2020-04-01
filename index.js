@@ -90,3 +90,22 @@ const nextSong = ()=> {
 		return currentSongIndex
 	}
 }
+
+const previousSong= () => {
+	newSongIndex = currentSongIndex - 1
+	if(newSongIndex < 0 ){
+		popUp.classList.add('pop-up')
+		popUp.innerText = 'This is the first song.'
+		setTimeout(() => {
+			popUp.classList.remove('pop-up')
+		}, 1000)
+		return currentSongIndex
+	} else {
+		audio.pause()
+		currentSong(newSongIndex)
+		audio = new Audio(songs[newSongIndex].url)
+		audio.play()
+		audio.loop='true'
+		return currentSongIndex = newSongIndex
+	}
+}
