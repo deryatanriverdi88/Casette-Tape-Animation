@@ -71,3 +71,22 @@ const currentSong = (index) => {
         song.innerHTML = songs[index].songName + musicLogo
     }
 }
+
+const nextSong = ()=> {
+	newSongIndex = currentSongIndex + 1
+	currentSong(newSongIndex)
+	if(newSongIndex < songs.length){
+		audio.pause()
+		audio = new Audio(songs[newSongIndex].url)
+		audio.play()
+		audio.loop='true'
+		return currentSongIndex = newSongIndex
+	} else {
+		popUp.classList.add('pop-up')
+		popUp.innerText = "This the last song."
+			setTimeout(() => {
+			popUp.classList.remove('pop-up')
+		}, 1000)
+		return currentSongIndex
+	}
+}
