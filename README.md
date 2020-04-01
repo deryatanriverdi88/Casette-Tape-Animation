@@ -1,1 +1,1 @@
-<video src="casette-tape-player-2.mov" width="320" height="200" controls preload></video>
+<video src="casette-tape-player-2.mp4" width="320" height="200" controls preload></video>
