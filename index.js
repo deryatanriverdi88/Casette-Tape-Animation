@@ -62,3 +62,12 @@ pauseButton.addEventListener('click', function(){
 	firstG.classList.remove('spin')
 	secondG.classList.remove('spin')
 })
+
+const currentSong = (index) => {
+    if(index === undefined){
+        return songs[currentSongIndex]
+    } else if (index < songs.length ){
+        artist.innerText = songs[index].artistName
+        song.innerHTML = songs[index].songName + musicLogo
+    }
+}
