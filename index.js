@@ -116,9 +116,11 @@ const previousSong= () => {
 }
 
 nextButton.addEventListener('click', function(){
-    nextSong()
+	nextSong()
+	spin()
 })
 
 previousButton.addEventListener('click', function(){
-    previousSong()
+	previousSong()
+	spin()
 })
