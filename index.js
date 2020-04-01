@@ -47,3 +47,18 @@ let song = document.querySelector(".song")
 let popUp = document.querySelector('.alert')
 let musicLogo = `<i class="fas fa-music"></i>`
 let currentSongIndex = 0
+
+playButton.addEventListener('click', function(){
+	audio.play()
+	artist.innerText = currentSong().artistName
+	song.innerHTML = currentSong().songName + musicLogo
+	firstG.classList.add('spin')
+	secondG.classList.add('spin')
+  audio.loop='true'
+})
+
+pauseButton.addEventListener('click', function(){
+	audio.pause()
+	firstG.classList.remove('spin')
+	secondG.classList.remove('spin')
+})
