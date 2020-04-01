@@ -109,3 +109,11 @@ const previousSong= () => {
 		return currentSongIndex = newSongIndex
 	}
 }
+
+nextButton.addEventListener('click', function(){
+    nextSong()
+})
+
+previousButton.addEventListener('click', function(){
+    previousSong()
+})
