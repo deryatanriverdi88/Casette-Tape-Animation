@@ -54,7 +54,7 @@ playButton.addEventListener('click', function(){
 	song.innerHTML = currentSong().songName + musicLogo
 	firstG.classList.add('spin')
 	secondG.classList.add('spin')
-  audio.loop='true'
+    audio.loop='true'
 })
 
 pauseButton.addEventListener('click', function(){
